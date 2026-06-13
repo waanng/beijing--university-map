@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>北京高校探访路线规划</title>
+  <meta name="theme-color" content="#174c3c" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <p>北京高校地理信息图</p>
+        <h1>探访路线规划</h1>
+      </div>
+      <div class="summary-strip" aria-label="数据概览">
+        <div>
+          <span>学校</span>
+          <strong id="totalCount">32</strong>
+        </div>
+        <div>
+          <span>最低投档分</span>
+          <strong>550+</strong>
+        </div>
+        <div>
+          <span>数据年份</span>
+          <strong>2025</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="panel filters-panel">
+        <section class="control-group">
+          <label class="label" for="searchInput">搜索学校或专业方向</label>
+          <input id="searchInput" class="search" type="search" placeholder="如：北航、法学、计算机" />
+        </section>
+
+        <section class="control-group">
+          <div class="row-label">
+            <span class="label">最低投档分</span>
+            <strong id="scoreLabel">560+</strong>
+          </div>
+          <input id="scoreRange" class="range" type="range" min="560" max="690" step="5" value="560" />
+        </section>
+
+        <section class="control-group">
+          <p class="label">兴趣方向</p>
+          <div id="interestChips" class="chip-grid"></div>
+        </section>
+
+        <section class="control-group">
+          <p class="label">探访区域</p>
+          <div id="areaChips" class="chip-grid"></div>
+        </section>
+
+        <section class="control-group">
+          <div class="row-label">
+            <span class="label">路线站点数</span>
+            <strong id="stopLabel">5 所</strong>
+          </div>
+          <input id="stopRange" class="range" type="range" min="3" max="8" step="1" value="5" />
+        </section>
+
+        <section class="control-group">
+          <label class="label" for="startSelect">路线从哪里开始</label>
+          <select id="startSelect" class="select"></select>
+        </section>
+
+        <div class="action-row">
+          <button id="planButton" class="primary-button" type="button">生成探访路线</button>
+          <button id="clearButton" class="ghost-button" type="button">清空选择</button>
+        </div>
+
+        <p class="hint">可先筛选学校，再点选想去的学校；没有手动选择时，会按筛选结果自动挑选并规划一条就近路线。</p>
+      </aside>
+
+      <section class="map-panel">
+        <div id="map"></div>
+        <div class="map-overlay">
+          <h2>把分数、专业和距离放在一张地图上</h2>
+          <p>点击地图点位或左侧学校清单，查看校园照片、投档分和优势专业；路线按经纬度近邻估算，适合作为线下探访前的第一版规划。</p>
+        </div>
+        <div id="mapBadge" class="map-badge">正在加载高校数据</div>
+      </section>
+
+      <aside class="panel detail-panel">
+        <section id="schoolDetail" class="school-detail"></section>
+        <section class="route-section">
+          <div class="route-head">
+            <div>
+              <p class="label">推荐路线</p>
+              <h2 id="routeTitle">先选择学校</h2>
+            </div>
+            <span id="routeDistance" class="distance-pill">0 km</span>
+          </div>
+          <ol id="routeList" class="route-list"></ol>
+        </section>
+      </aside>
+    </section>
+
+    <section class="school-drawer">
+      <div class="drawer-head">
+        <div>
+          <p class="label">学校清单</p>
+          <h2 id="resultTitle">全部学校</h2>
+        </div>
+        <button id="fitButton" class="ghost-button" type="button">查看全部点位</button>
+      </div>
+      <div id="schoolGrid" class="school-grid"></div>
+    </section>
+  </main>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="data/universities.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

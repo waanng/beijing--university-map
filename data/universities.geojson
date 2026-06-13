@@ -1,0 +1,934 @@
+{
+  "type": "FeatureCollection",
+  "name": "beijing_universities_550plus",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.32666666667,
+          40.0
+        ]
+      },
+      "properties": {
+        "id": "tsinghua",
+        "院校代码": "1023",
+        "学校名称": "清华大学",
+        "学校最低投档分": 689,
+        "学校最高投档分": 689,
+        "专业组数量": 1,
+        "专业组分数明细": "01 不限 689",
+        "优势专业": "工学；计算机科学与技术；建筑学；管理科学；基础学科",
+        "wikidata_id": "Q16955",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q16955",
+        "图片文件": "images/tsinghua.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Thu_gate.JPG",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Thu_gate.JPG",
+        "图片许可": "CC BY-SA 3.0",
+        "图片作者": "User:Yaoleilei",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.30527777778,
+          39.989722222222
+        ]
+      },
+      "properties": {
+        "id": "peking-university",
+        "院校代码": "1021",
+        "学校名称": "北京大学",
+        "学校最低投档分": 686,
+        "学校最高投档分": 697,
+        "专业组数量": 3,
+        "专业组分数明细": "01 不限 686；02 不限 697；03 物理＋化学 687",
+        "优势专业": "文理基础学科；医学；法学；经济学；计算机科学",
+        "wikidata_id": "Q16952",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q16952",
+        "图片文件": "images/peking-university.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/PekingUniversityPic6.jpg/1920px-PekingUniversityPic6.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:PekingUniversityPic6.jpg",
+        "图片许可": "CC BY 2.0",
+        "图片作者": "galaygobi",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.24462222222222,
+          39.907225
+        ]
+      },
+      "properties": {
+        "id": "ucas",
+        "院校代码": "1019",
+        "学校名称": "中国科学院大学",
+        "学校最低投档分": 680,
+        "学校最高投档分": 680,
+        "专业组数量": 1,
+        "专业组分数明细": "01 物理＋化学 680",
+        "优势专业": "数理化生命科学；计算机；材料科学；科研训练",
+        "wikidata_id": "Q6544465",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q6544465",
+        "图片文件": "images/ucas.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Gate_of_UCAS_Yuquanlu_Campus_%2820230906102500%29.jpg/1920px-Gate_of_UCAS_Yuquanlu_Campus_%2820230906102500%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Gate_of_UCAS_Yuquanlu_Campus_(20230906102500).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.31777777778,
+          39.970277777778
+        ]
+      },
+      "properties": {
+        "id": "renmin",
+        "院校代码": "1022",
+        "学校名称": "中国人民大学",
+        "学校最低投档分": 670,
+        "学校最高投档分": 671,
+        "专业组数量": 3,
+        "专业组分数明细": "01 不限 671；02 思想政治 670；03 物理＋化学 671",
+        "优势专业": "理论经济学；应用经济学；法学；社会学；新闻传播学",
+        "wikidata_id": "Q1074117",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1074117",
+        "图片文件": "images/renmin.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/RenminUniversitypic1.jpg/1920px-RenminUniversitypic1.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:RenminUniversitypic1.jpg",
+        "图片许可": "CC BY 2.0",
+        "图片作者": "chenyingphoto",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3504258392277,
+          39.98292614504212
+        ]
+      },
+      "properties": {
+        "id": "pku-health-science-center",
+        "院校代码": "1045",
+        "学校名称": "北京大学医学部",
+        "学校最低投档分": 664,
+        "学校最高投档分": 670,
+        "专业组数量": 4,
+        "专业组分数明细": "01 不限 667；03 育物理＋化学 670；04 物理＋化学 668；05 教物理＋化学 664",
+        "优势专业": "基础医学；临床医学；口腔医学；药学；公共卫生",
+        "wikidata_id": "Q7161060",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q7161060",
+        "图片文件": "images/pku-health-science-center.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/West_Gate_of_Peking_University_Health_Science_Center_1.jpg/1920px-West_Gate_of_Peking_University_Health_Science_Center_1.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:West_Gate_of_Peking_University_Health_Science_Center_1.jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "Xinpeijin",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3625,
+          39.957222222222
+        ]
+      },
+      "properties": {
+        "id": "beijing-normal",
+        "院校代码": "1032",
+        "学校名称": "北京师范大学",
+        "学校最低投档分": 652,
+        "学校最高投档分": 662,
+        "专业组数量": 5,
+        "专业组分数明细": "01 不限 660；02 不限 652；03 物理 657；04 思想政治 662；05 物理＋化学 659",
+        "优势专业": "教育学；心理学；中国语言文学；地理学；数学",
+        "wikidata_id": "Q1604022",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1604022",
+        "图片文件": "images/beijing-normal.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/BNU_Gate.jpg/1920px-BNU_Gate.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:BNU_Gate.jpg",
+        "图片许可": "CC BY-SA 3.0",
+        "图片作者": "Flsxx",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.34083333333,
+          39.98
+        ]
+      },
+      "properties": {
+        "id": "beihang",
+        "院校代码": "1047",
+        "学校名称": "北京航空航天大学",
+        "学校最低投档分": 651,
+        "学校最高投档分": 665,
+        "专业组数量": 3,
+        "专业组分数明细": "01 历史 653；02 物理＋化学 665；03 物理＋化学(中外合办) 651",
+        "优势专业": "航空宇航科学与技术；计算机；控制科学；软件工程；仪器科学",
+        "wikidata_id": "Q2299797",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q2299797",
+        "图片文件": "images/beihang.png",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/a/af/BUAAtile.png",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:BUAAtile.png",
+        "图片许可": "Public domain",
+        "图片作者": "Hercius",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.34465027,
+          39.96379852
+        ]
+      },
+      "properties": {
+        "id": "cupl",
+        "院校代码": "1039",
+        "学校名称": "中国政法大学",
+        "学校最低投档分": 646,
+        "学校最高投档分": 667,
+        "专业组数量": 5,
+        "专业组分数明细": "01 不限 667；02 不限 659；03 不限 656；04 不限 654；05 不限 646",
+        "优势专业": "法学；政治学；侦查学；法律实务",
+        "wikidata_id": "Q833961",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q833961",
+        "图片文件": "images/cupl.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/South_gate_of_CUPL_Changping_Campus_%2820210823161102%29.jpg/1920px-South_gate_of_CUPL_Changping_Campus_%2820210823161102%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:South_gate_of_CUPL_Changping_Campus_(20210823161102).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.17416666666666,
+          39.73888888888889
+        ]
+      },
+      "properties": {
+        "id": "ucass",
+        "院校代码": "1011",
+        "学校名称": "中国社会科学院大学",
+        "学校最低投档分": 639,
+        "学校最高投档分": 639,
+        "专业组数量": 1,
+        "专业组分数明细": "01 教不限 639",
+        "优势专业": "哲学；理论经济学；社会学；法学；政治学",
+        "wikidata_id": "Q30946111",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q30946111",
+        "图片文件": "images/ucass.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E4%B8%9C%E9%97%A8%2CApril%2C2019.jpg/1920px-%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E4%B8%9C%E9%97%A8%2CApril%2C2019.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E4%B8%9C%E9%97%A8,April,2019.jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "WonderBoy0609",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.30833333333,
+          39.957777777778
+        ]
+      },
+      "properties": {
+        "id": "bit",
+        "院校代码": "1048",
+        "学校名称": "北京理工大学",
+        "学校最低投档分": 633,
+        "学校最高投档分": 671,
+        "专业组数量": 5,
+        "专业组分数明细": "01 历史 654；02 物理＋化学 671；03 物理＋化学 664；04 不限(中外合办) 633；05 物理＋化学(中外合办) 640",
+        "优势专业": "兵器科学与技术；控制科学；材料科学；车辆工程；信息技术",
+        "wikidata_id": "Q23101",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q23101",
+        "图片文件": "images/bit.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Main_gate_of_Beijing_Institute_of_Technology_main_campus_%2820210523072112%29.jpg/1920px-Main_gate_of_Beijing_Institute_of_Technology_main_campus_%2820210523072112%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Main_gate_of_Beijing_Institute_of_Technology_main_campus_(20210523072112).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.341,
+          39.959
+        ]
+      },
+      "properties": {
+        "id": "cufe",
+        "院校代码": "1037",
+        "学校名称": "中央财经大学",
+        "学校最低投档分": 632,
+        "学校最高投档分": 643,
+        "专业组数量": 4,
+        "专业组分数明细": "01 不限 643；02 教物理 640；03 物理＋化学 640；04 京不限(中外合办) 632",
+        "优势专业": "应用经济学；金融学；财政学；会计学；统计学",
+        "wikidata_id": "Q5061957",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q5061957",
+        "图片文件": "images/cufe.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/%E4%B8%AD%E5%A4%AE%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6MBA.jpg/1920px-%E4%B8%AD%E5%A4%AE%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6MBA.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%A4%AE%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6MBA.jpg",
+        "图片许可": "",
+        "图片作者": "",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.352,
+          39.9598
+        ]
+      },
+      "properties": {
+        "id": "bupt",
+        "院校代码": "1028",
+        "学校名称": "北京邮电大学",
+        "学校最低投档分": 628,
+        "学校最高投档分": 663,
+        "专业组数量": 5,
+        "专业组分数明细": "01 历史 637；02 物理＋化学 663；03 物理＋化学 651；04 物理＋化学(中外合办) 641；05 物理＋化学(中外合办) 628",
+        "优势专业": "信息与通信工程；计算机科学与技术；网络空间安全；电子信息",
+        "wikidata_id": "Q4881210",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q4881210",
+        "图片文件": "images/bupt.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/West_gate_of_BUPT_%2820250305153111%29.jpg/1280px-West_gate_of_BUPT_%2820250305153111%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:West_gate_of_BUPT_(20250305153111).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.421,
+          39.9792
+        ]
+      },
+      "properties": {
+        "id": "uibe",
+        "院校代码": "1038",
+        "学校名称": "对外经济贸易大学",
+        "学校最低投档分": 627,
+        "学校最高投档分": 649,
+        "专业组数量": 6,
+        "专业组分数明细": "01 不限 644；02 不限 649；03 物理 639；04 物理 648；05 物理＋化学 636；06 物理＋化学(中外合办) 627",
+        "优势专业": "应用经济学；国际经济与贸易；金融学；法学；外语",
+        "wikidata_id": "Q835779",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q835779",
+        "图片文件": "images/uibe.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/South_gate_of_UIBE_%2820230215153342%29.jpg/1280px-South_gate_of_UIBE_%2820230215153342%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:South_gate_of_UIBE_(20230215153342).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.357096,
+          39.990249
+        ]
+      },
+      "properties": {
+        "id": "ustb",
+        "院校代码": "1026",
+        "学校名称": "北京科技大学",
+        "学校最低投档分": 626,
+        "学校最高投档分": 648,
+        "专业组数量": 5,
+        "专业组分数明细": "01 不限 626；02 物理 634；03 物理＋化学 648；04 物理＋化学 637；05 物理＋化学 634",
+        "优势专业": "材料科学与工程；冶金工程；矿业工程；机械；自动化",
+        "wikidata_id": "Q1510516",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1510516",
+        "图片文件": "images/ustb.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/USTB_west_gate.jpg/1280px-USTB_west_gate.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:USTB_west_gate.jpg",
+        "图片许可": "CC BY-SA 3.0",
+        "图片作者": "Ccyber5 (talk)\n\nOriginal uploader was Ccyber5 at en.wikipedia",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.331781,
+          39.901394
+        ]
+      },
+      "properties": {
+        "id": "ppsuc",
+        "院校代码": "1003",
+        "学校名称": "中国人民公安大学",
+        "学校最低投档分": 625,
+        "学校最高投档分": 625,
+        "专业组数量": 1,
+        "专业组分数明细": "01 不限 625",
+        "优势专业": "公安学；公安技术；侦查学；治安学",
+        "wikidata_id": "Q5100590",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q5100590",
+        "图片文件": "images/ppsuc.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/People%27s_Public_Security_University_of_China%2C_Muxidi_Campus_%2820201023161055%29.jpg/1280px-People%27s_Public_Security_University_of_China%2C_Muxidi_Campus_%2820201023161055%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:People%27s_Public_Security_University_of_China,_Muxidi_Campus_(20201023161055).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.33935,
+          39.950945
+        ]
+      },
+      "properties": {
+        "id": "bjtu",
+        "院校代码": "1025",
+        "学校名称": "北京交通大学",
+        "学校最低投档分": 624,
+        "学校最高投档分": 651,
+        "专业组数量": 7,
+        "专业组分数明细": "01 育不限 635；02 物理＋化学 640；03 教物理＋化学 651；04 物理＋化学 650；05 京物理＋化学(中外合办) 630；06 物理＋化学(中外合办) 631；07 物理＋化学(中外合办) 624",
+        "优势专业": "系统科学；交通运输；信息通信；轨道交通；土木工程",
+        "wikidata_id": "Q4587760",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q4587760",
+        "图片文件": "images/bjtu.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bjtu_siyuan_building.JPG/1280px-Bjtu_siyuan_building.JPG",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Bjtu_siyuan_building.JPG",
+        "图片许可": "Public domain",
+        "图片作者": "Walter Grassroot",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.30416666667,
+          39.954166666667
+        ]
+      },
+      "properties": {
+        "id": "bfsu",
+        "院校代码": "1033",
+        "学校名称": "北京外国语大学",
+        "学校最低投档分": 619,
+        "学校最高投档分": 635,
+        "专业组数量": 4,
+        "专业组分数明细": "01 不限 629；02 思想政治 635；03 物理＋化学 631；04 思想政治(中外合办) 619",
+        "优势专业": "外国语言文学；翻译；国际组织；外交外事",
+        "wikidata_id": "Q1144682",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1144682",
+        "图片文件": "images/bfsu.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/BFSU_West_Campus_%2820220624091809%29.jpg/1280px-BFSU_West_Campus_%2820220624091809%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:BFSU_West_Campus_(20220624091809).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3042,
+          40.0887
+        ]
+      },
+      "properties": {
+        "id": "ncepu",
+        "院校代码": "1040",
+        "学校名称": "华北电力大学(北京)",
+        "学校最低投档分": 612,
+        "学校最高投档分": 623,
+        "专业组数量": 3,
+        "专业组分数明细": "01 物理 612；02 历史 619；03 物理＋化学 623",
+        "优势专业": "电气工程；能源动力；自动化；新能源科学与工程",
+        "wikidata_id": "Q7054810",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q7054810",
+        "图片文件": "images/ncepu.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/%E5%8D%8E%E5%8C%97%E7%94%B5%E5%8A%9B%E5%A4%A7%E5%AD%A6%E2%80%94%E6%98%8C%E5%B9%B3%E2%80%94%E5%A4%9C-2017.jpg/1280px-%E5%8D%8E%E5%8C%97%E7%94%B5%E5%8A%9B%E5%A4%A7%E5%AD%A6%E2%80%94%E6%98%8C%E5%B9%B3%E2%80%94%E5%A4%9C-2017.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:%E5%8D%8E%E5%8C%97%E7%94%B5%E5%8A%9B%E5%A4%A7%E5%AD%A6%E2%80%94%E6%98%8C%E5%B9%B3%E2%80%94%E5%A4%9C-2017.jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "Crisduhan",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.35277777778,
+          40.0025
+        ]
+      },
+      "properties": {
+        "id": "cau",
+        "院校代码": "1029",
+        "学校名称": "中国农业大学",
+        "学校最低投档分": 609,
+        "学校最高投档分": 638,
+        "专业组数量": 4,
+        "专业组分数明细": "01 不限 636；02 物理＋化学 636；03 物理＋化学 638；04 不限(中外合办) 609",
+        "优势专业": "农业工程；食品科学；作物学；畜牧学；农林经济管理",
+        "wikidata_id": "Q257655",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q257655",
+        "图片文件": "images/cau.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6%E8%A5%BF%E6%A0%A1%E5%8C%BA%E4%B8%BB%E6%A5%BC.JPG/1280px-%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6%E8%A5%BF%E6%A0%A1%E5%8C%BA%E4%B8%BB%E6%A5%BC.JPG",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6%E8%A5%BF%E6%A0%A1%E5%8C%BA%E4%B8%BB%E6%A5%BC.JPG",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "Loong",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.24146,
+          40.21791
+        ]
+      },
+      "properties": {
+        "id": "cup-beijing",
+        "院校代码": "1042",
+        "学校名称": "中国石油大学(北京)",
+        "学校最低投档分": 604,
+        "学校最高投档分": 616,
+        "专业组数量": 4,
+        "专业组分数明细": "01 不限 616；02 物理 608；03 物理＋化学 604；04 思想政治＋历史 616",
+        "优势专业": "石油与天然气工程；地质资源；化学工程；安全工程",
+        "wikidata_id": "Q3274786",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q3274786",
+        "图片文件": "images/cup-beijing.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/North_gate_of_China_University_of_Petroleum%2C_Beijing_%2820210823161150%29.jpg/1280px-North_gate_of_China_University_of_Petroleum%2C_Beijing_%2820210823161150%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:North_gate_of_China_University_of_Petroleum,_Beijing_(20210823161150).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3175,
+          39.948333333333
+        ]
+      },
+      "properties": {
+        "id": "muc",
+        "院校代码": "1020",
+        "学校名称": "中央民族大学",
+        "学校最低投档分": 604,
+        "学校最高投档分": 629,
+        "专业组数量": 6,
+        "专业组分数明细": "01 不限 626；02 物理 628；03 历史 629；04 物理＋化学 622；05 物理＋化学(中外合办) 604；06 物理＋化学(中外合办) 606",
+        "优势专业": "民族学；中国语言文学；社会学；音乐与舞蹈学",
+        "wikidata_id": "Q190336",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q190336",
+        "图片文件": "images/muc.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Minzu_University_of_China_%2820170330115818%29.jpg/1280px-Minzu_University_of_China_%2820170330115818%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Minzu_University_of_China_(20170330115818).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.46313818465818,
+          39.984834741182276
+        ]
+      },
+      "properties": {
+        "id": "cafa",
+        "院校代码": "1008",
+        "学校名称": "中央美术学院",
+        "学校最低投档分": 598,
+        "学校最高投档分": 610,
+        "专业组数量": 4,
+        "专业组分数明细": "01 不限 609；02 历史 601；03 物理＋化学 610；04 不限(中外合办) 598",
+        "优势专业": "美术学；设计学；建筑艺术；艺术理论",
+        "wikidata_id": "Q837873",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q837873",
+        "图片文件": "images/cafa.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/East_gate_of_CAFA_%2820231207160608%29.jpg/1280px-East_gate_of_CAFA_%2820231207160608%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:East_gate_of_CAFA_(20231207160608).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3435,
+          39.9978
+        ]
+      },
+      "properties": {
+        "id": "cumtb",
+        "院校代码": "1041",
+        "学校名称": "中国矿业大学(北京)",
+        "学校最低投档分": 596,
+        "学校最高投档分": 605,
+        "专业组数量": 3,
+        "专业组分数明细": "01 不限 605；02 物理 598；03 物理＋化学 596",
+        "优势专业": "矿业工程；安全科学与工程；测绘；地质工程",
+        "wikidata_id": "Q17014396",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q17014396",
+        "图片文件": "images/cumtb.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/East_gate_of_CUMTB_%2820250317114637%29.jpg/1280px-East_gate_of_CUMTB_%2820250317114637%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:East_gate_of_CUMTB_(20250317114637).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.40439791315691,
+          39.93620443332822
+        ]
+      },
+      "properties": {
+        "id": "central-academy-drama",
+        "院校代码": "1009",
+        "学校名称": "中央戏剧学院",
+        "学校最低投档分": 596,
+        "学校最高投档分": 596,
+        "专业组数量": 1,
+        "专业组分数明细": "01 不限 596",
+        "优势专业": "戏剧与影视学；表演；导演；戏剧文学",
+        "wikidata_id": "Q2822274",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q2822274",
+        "图片文件": "images/central-academy-drama.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Central_Academy_of_Drama%2C_Changping_campus_%2820220406141856%29.jpg/1280px-Central_Academy_of_Drama%2C_Changping_campus_%2820220406141856%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Central_Academy_of_Drama,_Changping_campus_(20220406141856).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.41527777778,
+          39.968888888889
+        ]
+      },
+      "properties": {
+        "id": "buct",
+        "院校代码": "1027",
+        "学校名称": "北京化工大学",
+        "学校最低投档分": 592,
+        "学校最高投档分": 624,
+        "专业组数量": 5,
+        "专业组分数明细": "01 不限 617；02 物理＋化学 618；03 物理＋化学 615；04 物理＋化学 624；05 物理＋化学(中外合办) 592",
+        "优势专业": "化学工程与技术；材料科学；化学；生物工程",
+        "wikidata_id": "Q2496210",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q2496210",
+        "图片文件": "images/buct.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Beijing_University_of_Chemical_Technology_%2820240125140308%29.jpg/1280px-Beijing_University_of_Chemical_Technology_%2820240125140308%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Beijing_University_of_Chemical_Technology_(20240125140308).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3455,
+          39.9888
+        ]
+      },
+      "properties": {
+        "id": "cugb",
+        "院校代码": "1043",
+        "学校名称": "中国地质大学(北京)",
+        "学校最低投档分": 591,
+        "学校最高投档分": 612,
+        "专业组数量": 3,
+        "专业组分数明细": "01 不限 612；02 物理 608；03 物理＋化学 591",
+        "优势专业": "地质学；地质资源与地质工程；地球物理；珠宝",
+        "wikidata_id": "Q48880972",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q48880972",
+        "图片文件": "images/cugb.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Jiao_5_in_CUG_Beijing.jpg/1280px-Jiao_5_in_CUG_Beijing.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Jiao_5_in_CUG_Beijing.jpg",
+        "图片许可": "CC BY-SA 3.0",
+        "图片作者": "Zhangmoon618",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4775,
+          39.87111111
+        ]
+      },
+      "properties": {
+        "id": "bjut",
+        "院校代码": "1049",
+        "学校名称": "北京工业大学",
+        "学校最低投档分": 586,
+        "学校最高投档分": 622,
+        "专业组数量": 7,
+        "专业组分数明细": "01 不限 607；02 物理 591；03 物理＋化学 622；04 物理＋化学 603；05 物理＋化学 592；06 物理(中外合办) 586；07 物理＋化学(中外合办) 598",
+        "优势专业": "土木工程；材料科学；计算机；环境工程；机械工程",
+        "wikidata_id": "Q1674548",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1674548",
+        "图片文件": "images/bjut.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/South_gate_of_Beijing_University_of_Technology_%2820241022154233%29.jpg/1280px-South_gate_of_Beijing_University_of_Technology_%2820241022154233%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:South_gate_of_Beijing_University_of_Technology_(20241022154233).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.550162,
+          39.909106
+        ]
+      },
+      "properties": {
+        "id": "cuc",
+        "院校代码": "1036",
+        "学校名称": "中国传媒大学",
+        "学校最低投档分": 585,
+        "学校最高投档分": 631,
+        "专业组数量": 7,
+        "专业组分数明细": "01 不限 622；02 不限 628；03 不限 623；04 思想政治 625；05 物理＋化学 617；06 物理＋化学 631；08 育物理＋化学(中外合办) 585",
+        "优势专业": "新闻传播学；戏剧与影视学；播音主持；数字媒体",
+        "wikidata_id": "Q1765168",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q1765168",
+        "图片文件": "images/cuc.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Main_building_and_train.jpg/1280px-Main_building_and_train.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Main_building_and_train.jpg",
+        "图片许可": "CC BY-SA 3.0",
+        "图片作者": "祖国必然统一",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.34527778,
+          40.00138889
+        ]
+      },
+      "properties": {
+        "id": "bfu",
+        "院校代码": "1030",
+        "学校名称": "北京林业大学",
+        "学校最低投档分": 585,
+        "学校最高投档分": 615,
+        "专业组数量": 10,
+        "专业组分数明细": "01 不限 610；02 不限 615；03 物理 614；04 生物 614；06 育物理＋化学 604；07 物理＋化学 604；08 教物理＋化学 606；09 物理＋化学 588；10 京物理＋化学 589；11 物理＋化学(中外合办) 585",
+        "优势专业": "风景园林学；林学；生态学；水土保持",
+        "wikidata_id": "Q4881133",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q4881133",
+        "图片文件": "images/bfu.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Beijing_Forestry_University_%2853670020%29.jpeg/1280px-Beijing_Forestry_University_%2853670020%29.jpeg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Beijing_Forestry_University_(53670020).jpeg",
+        "图片许可": "CC BY 3.0",
+        "图片作者": "Shihao Sun",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3532808,
+          39.9717416
+        ]
+      },
+      "properties": {
+        "id": "bfa",
+        "院校代码": "1016",
+        "学校名称": "北京电影学院",
+        "学校最低投档分": 583,
+        "学校最高投档分": 600,
+        "专业组数量": 6,
+        "专业组分数明细": "01 不限 594；02 不限 588；03 不限 595；04 物理 583；05 历史 588；06 物理＋化学 600",
+        "优势专业": "戏剧影视；电影导演；摄影；动画；电影制作",
+        "wikidata_id": "Q138182",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q138182",
+        "图片文件": "images/bfa.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Gate_of_Beijing_Film_Academy_%2820220728152655%29.jpg/1280px-Gate_of_Beijing_Film_Academy_%2820220728152655%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:Gate_of_Beijing_Film_Academy_(20220728152655).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.40887,
+          39.90951
+        ]
+      },
+      "properties": {
+        "id": "pumc",
+        "院校代码": "1046",
+        "学校名称": "北京协和医学院",
+        "学校最低投档分": 567,
+        "学校最高投档分": 653,
+        "专业组数量": 2,
+        "专业组分数明细": "01 物理＋化学 653；02 京物理＋化学 567",
+        "优势专业": "临床医学；基础医学；药学；公共卫生；生物医学工程",
+        "wikidata_id": "Q3372325",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q3372325",
+        "图片文件": "images/pumc.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PUMC_1.jpg/1280px-PUMC_1.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:PUMC_1.jpg",
+        "图片许可": "CC BY-SA 2.5",
+        "图片作者": "The original uploader was Dirrival at Chinese Wikipedia.",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.30027778,
+          39.92944444
+        ]
+      },
+      "properties": {
+        "id": "capital-normal",
+        "院校代码": "1052",
+        "学校名称": "首都师范大学",
+        "学校最低投档分": 560,
+        "学校最高投档分": 587,
+        "专业组数量": 7,
+        "专业组分数明细": "01 不限 570；03 育地理 587；04 物理＋化学 568；05 教物理＋化学 560；06 物理＋化学 577；07 京物理＋化学 569；08 物理＋化学 572",
+        "优势专业": "数学；教育学；中国语言文学；世界史；美术学",
+        "wikidata_id": "Q3551814",
+        "wikidata_url": "https://www.wikidata.org/wiki/Q3551814",
+        "图片文件": "images/capital-normal.jpg",
+        "图片来源URL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/CNU_Main_Campus_%2820220624092409%29.jpg/1280px-CNU_Main_Campus_%2820220624092409%29.jpg",
+        "图片说明页": "https://commons.wikimedia.org/wiki/File:CNU_Main_Campus_(20220624092409).jpg",
+        "图片许可": "CC BY-SA 4.0",
+        "图片作者": "N509FZ",
+        "招生分数来源": "北京教育考试院《2025年北京市高招本科普通批录取投档线》",
+        "筛选口径": "北京高校；2025年北京市本科普通批；学校最低投档分>=550"
+      }
+    }
+  ]
+}
