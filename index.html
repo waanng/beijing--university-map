@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>北京高校探访路线规划</title>
+  <title>北京高校探访筛选与对比</title>
   <meta name="theme-color" content="#174c3c" />
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -17,7 +13,7 @@
     <header class="topbar">
       <div class="brand">
         <p>北京高校地理信息图</p>
-        <h1>探访路线规划</h1>
+        <h1>探访筛选与对比</h1>
       </div>
       <div class="summary-strip" aria-label="数据概览">
         <div>
@@ -60,47 +56,50 @@
           <div id="areaChips" class="chip-grid"></div>
         </section>
 
-        <section class="control-group">
-          <div class="row-label">
-            <span class="label">路线站点数</span>
-            <strong id="stopLabel">5 所</strong>
-          </div>
-          <input id="stopRange" class="range" type="range" min="3" max="8" step="1" value="5" />
-        </section>
-
-        <section class="control-group">
-          <label class="label" for="startSelect">路线从哪里开始</label>
-          <select id="startSelect" class="select"></select>
-        </section>
-
         <div class="action-row">
-          <button id="planButton" class="primary-button" type="button">生成探访路线</button>
-          <button id="clearButton" class="ghost-button" type="button">清空选择</button>
+          <button id="recommendButton" class="primary-button" type="button">推荐优先探访</button>
+          <button id="clearButton" class="ghost-button" type="button">清空关注</button>
         </div>
 
-        <p class="hint">可先筛选学校，再点选想去的学校；没有手动选择时，会按筛选结果自动挑选并规划一条就近路线。</p>
+        <p class="hint">先按分数、兴趣方向和区域缩小范围，再把学校加入关注清单。右侧会从分数段、区域分布和专业方向帮助比较。</p>
       </aside>
 
       <section class="map-panel">
         <div id="map"></div>
         <div class="map-overlay">
-          <h2>把分数、专业和距离放在一张地图上</h2>
-          <p>点击地图点位或左侧学校清单，查看校园照片、投档分和优势专业；路线按经纬度近邻估算，适合作为线下探访前的第一版规划。</p>
+          <h2>把分数、专业和区位放在一张地图上</h2>
+          <p>点击地图点位或学校卡片，查看校园照片、投档分和优势专业；用筛选与关注清单比较哪些学校更值得安排实地探访。</p>
         </div>
         <div id="mapBadge" class="map-badge">正在加载高校数据</div>
       </section>
 
       <aside class="panel detail-panel">
         <section id="schoolDetail" class="school-detail"></section>
-        <section class="route-section">
-          <div class="route-head">
+        <section class="compare-section">
+          <div class="compare-head">
             <div>
-              <p class="label">推荐路线</p>
-              <h2 id="routeTitle">先选择学校</h2>
+              <p class="label">对比视图</p>
+              <h2 id="compareTitle">筛选结果概览</h2>
             </div>
-            <span id="routeDistance" class="distance-pill">0 km</span>
+            <span id="compareCount" class="distance-pill">0 所</span>
           </div>
-          <ol id="routeList" class="route-list"></ol>
+          <div id="metricGrid" class="metric-grid"></div>
+          <div id="compareBars" class="compare-bars"></div>
+          <div id="watchList" class="watch-list"></div>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>学校</th>
+                  <th>最低分</th>
+                  <th>最高分</th>
+                  <th>方向</th>
+                  <th>区域</th>
+                </tr>
+              </thead>
+              <tbody id="compareTable"></tbody>
+            </table>
+          </div>
         </section>
       </aside>
     </section>

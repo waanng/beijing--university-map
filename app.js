@@ -2,13 +2,11 @@ const state = {
   schools: [],
   filtered: [],
   selectedId: "",
-  chosenIds: new Set(),
+  watchIds: new Set(),
   interest: "全部",
   area: "全部",
   minScore: 560,
-  maxStops: 5,
   markers: new Map(),
-  routeLine: null,
   map: null
 };
 
@@ -17,25 +15,31 @@ const els = {
   searchInput: document.querySelector("#searchInput"),
   scoreRange: document.querySelector("#scoreRange"),
   scoreLabel: document.querySelector("#scoreLabel"),
-  stopRange: document.querySelector("#stopRange"),
-  stopLabel: document.querySelector("#stopLabel"),
-  startSelect: document.querySelector("#startSelect"),
   interestChips: document.querySelector("#interestChips"),
   areaChips: document.querySelector("#areaChips"),
   schoolGrid: document.querySelector("#schoolGrid"),
   schoolDetail: document.querySelector("#schoolDetail"),
   resultTitle: document.querySelector("#resultTitle"),
   mapBadge: document.querySelector("#mapBadge"),
-  routeTitle: document.querySelector("#routeTitle"),
-  routeDistance: document.querySelector("#routeDistance"),
-  routeList: document.querySelector("#routeList"),
-  planButton: document.querySelector("#planButton"),
+  compareTitle: document.querySelector("#compareTitle"),
+  compareCount: document.querySelector("#compareCount"),
+  metricGrid: document.querySelector("#metricGrid"),
+  compareBars: document.querySelector("#compareBars"),
+  watchList: document.querySelector("#watchList"),
+  compareTable: document.querySelector("#compareTable"),
+  recommendButton: document.querySelector("#recommendButton"),
   clearButton: document.querySelector("#clearButton"),
   fitButton: document.querySelector("#fitButton")
 };
 
 const interestOptions = ["全部", "理工", "医学", "财经", "政法", "师范", "传媒艺术", "农林地矿", "语言"];
 const areaOptions = ["全部", "海淀学院路", "海淀西部", "朝阳东部", "昌平北部", "西城东城", "房山良乡"];
+const scoreBands = [
+  { label: "680+", min: 680 },
+  { label: "640-679", min: 640, max: 679 },
+  { label: "600-639", min: 600, max: 639 },
+  { label: "560-599", min: 560, max: 599 }
+];
 
 function toNumber(value) {
   return Number.parseFloat(value);
@@ -75,26 +79,22 @@ function interestOf(school) {
   return "理工";
 }
 
-function textOf(school) {
-  return `${school["学校名称"]} ${school["优势专业"]} ${school["专业组分数明细"]} ${areaOf(school)} ${interestOf(school)}`;
+function scoreBandOf(school) {
+  const score = scoreOf(school);
+  return scoreBands.find((band) => score >= band.min && (band.max === undefined || score <= band.max))?.label || "其他";
 }
 
-function distanceKm(a, b) {
-  const [lat1, lon1] = latLng(a).map((x) => x * Math.PI / 180);
-  const [lat2, lon2] = latLng(b).map((x) => x * Math.PI / 180);
-  const dLat = lat2 - lat1;
-  const dLon = lon2 - lon1;
-  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
-  return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
+function textOf(school) {
+  return `${school["学校名称"]} ${school["优势专业"]} ${school["专业组分数明细"]} ${areaOf(school)} ${interestOf(school)} ${scoreBandOf(school)}`;
 }
 
 function markerIcon(school) {
   const selected = school.id === state.selectedId ? "selected" : "";
-  const route = state.chosenIds.has(school.id) ? "route" : "";
+  const watched = state.watchIds.has(school.id) ? "watched" : "";
   const label = scoreOf(school) >= 680 ? "A" : scoreOf(school) >= 640 ? "B" : scoreOf(school) >= 600 ? "C" : "D";
   return L.divIcon({
     className: "",
-    html: `<span class="marker-pin ${selected} ${route}"><span>${label}</span></span>`,
+    html: `<span class="marker-pin ${selected} ${watched}"><span>${label}</span></span>`,
     iconSize: [30, 30],
     iconAnchor: [15, 28]
   });
@@ -159,19 +159,19 @@ function renderSchoolGrid() {
   }
 
   els.schoolGrid.innerHTML = state.filtered.map((school) => {
-    const selected = state.chosenIds.has(school.id) ? "selected" : "";
+    const watched = state.watchIds.has(school.id) ? "selected" : "";
     const active = school.id === state.selectedId ? "active" : "";
     const tags = school["优势专业"].split("；").slice(0, 3).join(" / ");
     return `
-      <article class="school-card ${selected} ${active}" data-id="${school.id}">
+      <article class="school-card ${watched} ${active}" data-id="${school.id}">
         <img src="data/${school["图片文件"]}" alt="${school["学校名称"]}" />
         <div class="school-card-body">
           <h3>${school["学校名称"]}</h3>
-          <p>${scoreOf(school)}-${maxScoreOf(school)} 分 · ${areaOf(school)}</p>
+          <p>${scoreOf(school)}-${maxScoreOf(school)} 分 · ${interestOf(school)} · ${areaOf(school)}</p>
           <p>${tags}</p>
           <div class="card-actions">
             <button class="mini-button view" type="button" data-id="${school.id}">查看</button>
-            <button class="mini-button pick ${selected}" type="button" data-id="${school.id}">${selected ? "已加入" : "加入路线"}</button>
+            <button class="mini-button pick ${watched}" type="button" data-id="${school.id}">${watched ? "已关注" : "加入对比"}</button>
           </div>
         </div>
       </article>
@@ -185,7 +185,7 @@ function renderSchoolGrid() {
     });
   });
   els.schoolGrid.querySelectorAll("button.pick").forEach((button) => {
-    button.addEventListener("click", () => toggleChosen(button.dataset.id));
+    button.addEventListener("click", () => toggleWatch(button.dataset.id));
   });
 }
 
@@ -201,23 +201,15 @@ function renderDetail() {
       <div class="score-line">
         <span class="score-pill">最低 ${scoreOf(school)} 分</span>
         <span class="score-pill">最高 ${maxScoreOf(school)} 分</span>
+        <span class="score-pill">${interestOf(school)}</span>
         <span class="score-pill">${areaOf(school)}</span>
       </div>
       <h2>${school["学校名称"]}</h2>
-      <p>适合关注 ${interestOf(school)} 方向的孩子重点了解。探访时可以观察校园区位、学科氛围、交通便利度，以及相关学院或实验空间的开放信息。</p>
+      <p>适合关注 ${interestOf(school)} 方向的孩子重点了解。可以把它加入对比，再和同分段、同区域或同专业方向的学校一起判断是否值得实地探访。</p>
       <div class="tag-row">${tags}</div>
       <a class="source-link" href="${school.wikidata_url}" target="_blank" rel="noreferrer">查看坐标来源</a>
     </div>
   `;
-}
-
-function renderStartOptions() {
-  const current = els.startSelect.value;
-  const options = state.filtered.length ? state.filtered : state.schools;
-  els.startSelect.innerHTML = options.map((school) => (
-    `<option value="${school.id}">${school["学校名称"]}</option>`
-  )).join("");
-  if (current && options.some((school) => school.id === current)) els.startSelect.value = current;
 }
 
 function selectSchool(id, pan = false) {
@@ -232,91 +224,129 @@ function selectSchool(id, pan = false) {
   }
 }
 
-function toggleChosen(id) {
-  if (state.chosenIds.has(id)) {
-    state.chosenIds.delete(id);
+function toggleWatch(id) {
+  if (state.watchIds.has(id)) {
+    state.watchIds.delete(id);
   } else {
-    state.chosenIds.add(id);
+    state.watchIds.add(id);
   }
   renderSchoolGrid();
   updateMarkers();
-  renderRoute();
+  renderCompare();
 }
 
-function nearestRoute(schools, startId) {
-  if (!schools.length) return [];
-  const remaining = [...schools];
-  const route = [];
-  let currentIndex = Math.max(0, remaining.findIndex((school) => school.id === startId));
-  route.push(remaining.splice(currentIndex, 1)[0]);
-  while (remaining.length) {
-    const current = route[route.length - 1];
-    let bestIndex = 0;
-    let bestDistance = Infinity;
-    remaining.forEach((candidate, index) => {
-      const d = distanceKm(current, candidate);
-      if (d < bestDistance) {
-        bestDistance = d;
-        bestIndex = index;
-      }
-    });
-    route.push(remaining.splice(bestIndex, 1)[0]);
-  }
-  return route;
+function countBy(items, getter) {
+  return items.reduce((acc, item) => {
+    const key = getter(item);
+    acc[key] = (acc[key] || 0) + 1;
+    return acc;
+  }, {});
 }
 
-function planRoute() {
-  let pool = state.chosenIds.size
-    ? state.schools.filter((school) => state.chosenIds.has(school.id))
-    : state.filtered.slice(0, state.maxStops);
-  if (!pool.length) pool = state.schools.slice(0, state.maxStops);
-  pool = pool.slice(0, state.maxStops);
-  const route = nearestRoute(pool, els.startSelect.value || pool[0]?.id);
-  state.chosenIds = new Set(route.map((school) => school.id));
-  renderRoute(route);
-  renderSchoolGrid();
-  updateMarkers();
-  if (route.length) {
-    const bounds = L.latLngBounds(route.map(latLng));
-    state.map.fitBounds(bounds, { padding: [60, 60], maxZoom: 13 });
-  }
+function average(items, getter) {
+  if (!items.length) return 0;
+  return items.reduce((sum, item) => sum + getter(item), 0) / items.length;
 }
 
-function renderRoute(route = null) {
-  const schools = route || nearestRoute(state.schools.filter((school) => state.chosenIds.has(school.id)), els.startSelect.value);
-  if (state.routeLine) state.routeLine.remove();
-  if (!schools.length) {
-    els.routeTitle.textContent = "先选择学校";
-    els.routeDistance.textContent = "0 km";
-    els.routeList.innerHTML = `<li class="empty">点选学校或点击“生成探访路线”，这里会出现建议顺序。</li>`;
+function renderBarGroup(title, counts, order) {
+  const max = Math.max(1, ...Object.values(counts));
+  const rows = order.filter((item) => counts[item]).map((item) => {
+    const count = counts[item];
+    const width = Math.max(8, Math.round((count / max) * 100));
+    return `
+      <div class="bar-row">
+        <span>${item}</span>
+        <div class="bar-track"><i style="width:${width}%"></i></div>
+        <strong>${count}</strong>
+      </div>
+    `;
+  }).join("");
+  return `
+    <section class="bar-card">
+      <h3>${title}</h3>
+      ${rows || `<p class="muted">暂无数据</p>`}
+    </section>
+  `;
+}
+
+function comparisonPool() {
+  const watched = state.schools.filter((school) => state.watchIds.has(school.id));
+  return watched.length ? watched : state.filtered;
+}
+
+function renderCompare() {
+  const items = comparisonPool();
+  const usingWatch = state.watchIds.size > 0;
+  els.compareTitle.textContent = usingWatch ? "关注清单对比" : "筛选结果概览";
+  els.compareCount.textContent = `${items.length} 所`;
+
+  if (!items.length) {
+    els.metricGrid.innerHTML = "";
+    els.compareBars.innerHTML = "";
+    els.watchList.innerHTML = `<div class="empty">暂无学校可对比。调整筛选条件后会自动生成概览。</div>`;
+    els.compareTable.innerHTML = "";
     return;
   }
 
-  let total = 0;
-  for (let i = 1; i < schools.length; i += 1) total += distanceKm(schools[i - 1], schools[i]);
+  const minScore = Math.min(...items.map(scoreOf));
+  const maxScore = Math.max(...items.map(maxScoreOf));
+  const avgScore = Math.round(average(items, scoreOf));
+  const topInterest = Object.entries(countBy(items, interestOf)).sort((a, b) => b[1] - a[1])[0]?.[0] || "-";
 
-  els.routeTitle.textContent = `${schools.length} 站探访`;
-  els.routeDistance.textContent = `${total.toFixed(1)} km`;
-  els.routeList.innerHTML = schools.map((school, index) => {
-    const next = index === 0 ? "起点" : `距上一站约 ${distanceKm(schools[index - 1], school).toFixed(1)} km`;
-    const focus = school["优势专业"].split("；").slice(0, 2).join("、");
-    return `
-      <li class="route-item">
-        <span class="route-num">${index + 1}</span>
-        <div>
-          <strong>${school["学校名称"]}</strong>
-          <span>${next} · ${scoreOf(school)} 分起 · 重点看 ${focus}</span>
-        </div>
-      </li>
-    `;
-  }).join("");
+  els.metricGrid.innerHTML = `
+    <div class="metric-card"><span>对比学校</span><strong>${items.length}</strong></div>
+    <div class="metric-card"><span>最低分范围</span><strong>${minScore}-${maxScore}</strong></div>
+    <div class="metric-card"><span>平均最低分</span><strong>${avgScore}</strong></div>
+    <div class="metric-card"><span>最多方向</span><strong>${topInterest}</strong></div>
+  `;
 
-  state.routeLine = L.polyline(schools.map(latLng), {
-    color: "#315f83",
-    weight: 4,
-    opacity: 0.82,
-    dashArray: "8 8"
-  }).addTo(state.map);
+  els.compareBars.innerHTML = [
+    renderBarGroup("按分数段", countBy(items, scoreBandOf), scoreBands.map((band) => band.label)),
+    renderBarGroup("按专业方向", countBy(items, interestOf), interestOptions.filter((x) => x !== "全部")),
+    renderBarGroup("按探访区域", countBy(items, areaOf), areaOptions.filter((x) => x !== "全部"))
+  ].join("");
+
+  const watched = state.schools.filter((school) => state.watchIds.has(school.id));
+  els.watchList.innerHTML = watched.length
+    ? `<h3>已关注学校</h3><div class="watch-tags">${watched.map((school) => `<button type="button" data-id="${school.id}">${school["学校名称"]}</button>`).join("")}</div>`
+    : `<div class="empty">还没有关注学校。点击卡片里的“加入对比”，这里会变成你的探访候选清单。</div>`;
+  els.watchList.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => selectSchool(button.dataset.id, true));
+  });
+
+  els.compareTable.innerHTML = [...items]
+    .sort((a, b) => scoreOf(b) - scoreOf(a))
+    .slice(0, 12)
+    .map((school) => `
+      <tr data-id="${school.id}">
+        <td>${school["学校名称"]}</td>
+        <td>${scoreOf(school)}</td>
+        <td>${maxScoreOf(school)}</td>
+        <td>${interestOf(school)}</td>
+        <td>${areaOf(school)}</td>
+      </tr>
+    `).join("");
+  els.compareTable.querySelectorAll("tr").forEach((row) => {
+    row.addEventListener("click", () => selectSchool(row.dataset.id, true));
+  });
+}
+
+function recommendWatchList() {
+  const groups = new Map();
+  state.filtered.forEach((school) => {
+    const key = interestOf(school);
+    const current = groups.get(key);
+    if (!current || scoreOf(school) > scoreOf(current)) groups.set(key, school);
+  });
+  const recommended = [...groups.values()]
+    .sort((a, b) => scoreOf(b) - scoreOf(a))
+    .slice(0, 8);
+  state.watchIds = new Set(recommended.map((school) => school.id));
+  if (recommended[0]) state.selectedId = recommended[0].id;
+  renderSchoolGrid();
+  renderDetail();
+  updateMarkers();
+  renderCompare();
 }
 
 function fitFiltered() {
@@ -329,10 +359,10 @@ function refresh() {
   if (state.filtered.length && !state.filtered.some((school) => school.id === state.selectedId)) {
     state.selectedId = state.filtered[0].id;
   }
-  renderStartOptions();
   renderSchoolGrid();
   renderDetail();
   updateMarkers();
+  renderCompare();
   els.mapBadge.textContent = `显示 ${state.filtered.length} / ${state.schools.length} 所学校`;
 }
 
@@ -352,6 +382,7 @@ async function init() {
     const response = await fetch("data/universities.json");
     state.schools = await response.json();
   }
+
   state.schools.forEach((school) => {
     const marker = L.marker(latLng(school), {
       icon: markerIcon(school),
@@ -372,21 +403,16 @@ async function init() {
     els.scoreLabel.textContent = `${state.minScore}+`;
     refresh();
   });
-  els.stopRange.addEventListener("input", () => {
-    state.maxStops = Number.parseInt(els.stopRange.value, 10);
-    els.stopLabel.textContent = `${state.maxStops} 所`;
-  });
-  els.planButton.addEventListener("click", planRoute);
+  els.recommendButton.addEventListener("click", recommendWatchList);
   els.clearButton.addEventListener("click", () => {
-    state.chosenIds.clear();
-    renderRoute([]);
+    state.watchIds.clear();
     renderSchoolGrid();
     updateMarkers();
+    renderCompare();
   });
   els.fitButton.addEventListener("click", fitFiltered);
 
   refresh();
-  renderRoute([]);
   fitFiltered();
 }
 
